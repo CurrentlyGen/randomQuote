@@ -9,12 +9,13 @@ body {
 }
 
 #container {
-    width: 33vw;
+    max-width: min(600px, 80vw);
     aspect-ratio: 6/4;
+    overflow: hidden;
     box-shadow: 10px 10px 17px #3972a8;
     background-color: #e9fbff;
     border-radius: 13px;
-    padding: 30px 50px 30px 50px;
+    padding: 30px 50px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -23,27 +24,27 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 1.66vw;
+    font-size: 199%;
     margin: 0;
-}
-
-#quote {
-    font-size: 1.26vw;
 }
 
 .quote-container {
     margin: 0;
-    font-size: 1.7vw;
+    font-size: 175%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
     margin-bottom: 0;
+}
+
+#quote {
+    font-size: 74.1%;
 }
 
 #quotee {
     margin: 5px 0 0 0;
     text-align: right;
     font-style: italic;
-    font-size: 17px;
+    font-size: 100%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: lighter;
 }
@@ -84,10 +85,10 @@ hr {
 }
 
 #new-quote {
-    padding: 0 20px;
+    padding: 0 3.7%;
     background-color: #59afff;
     color: white;
-    font-size: 18px;
+    font-size: 100%;
     margin-left: auto;
     transition: 0.2s;
     transition: color 0.1s;
@@ -102,6 +103,6 @@ hr {
 } 
 
 img {
-    width: 20px;
+    width: 80%;
     height: auto;
 }
