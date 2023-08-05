@@ -124,7 +124,7 @@ function pickQuote(){
 }
 
 function copyQuote() {
-    navigator.clipboard.writeText('"' + quote.textContent + '"');       
+    navigator.clipboard.writeText(`"${quote.textContent}"`);       
 }
 
 pickQuote();
