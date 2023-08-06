@@ -44,7 +44,7 @@ const quotes = [
         quotee: "Neil Degrasse Tyson"
     },
     {
-        quote: "When a person can't find a deep sense of meaning, they fistract themselves with pleasure.",
+        quote: "When a person can't find a deep sense of meaning, they distract themselves with pleasure.",
         quotee: "Viktor Frankl"
     },
     {
@@ -115,6 +115,9 @@ const quotes = [
 
 const quote = document.getElementById("quote");
 const quotee = document.getElementById("quotee");
+const newQuoteBtn = document.getElementById("new-quote");
+const copyBtn = document.getElementById("copyBtn");
+const theme = document.getElementById("theme");
 
 function pickQuote(){
     const quoteIndex = Math.floor(Math.random() * quotes.length);
@@ -127,10 +130,26 @@ function copyQuote() {
     navigator.clipboard.writeText(`"${quote.textContent}"`);       
 }
 
+function changeTheme() {
+    if (theme.innerHTML === '<img src="./svg/sun.svg">') {
+        document.documentElement.style.setProperty('--main-blue', '#59afff');
+        document.documentElement.style.setProperty('--blue-shadow', '#3972a8');
+        document.documentElement.style.setProperty('--container-bg', '#e9fbff');
+        document.documentElement.style.setProperty('--font-color', '#595959');
+        theme.innerHTML = '<img src="./svg/moon.svg">';
+    } else {
+        document.documentElement.style.setProperty('--main-blue', '#152b40');
+        document.documentElement.style.setProperty('--blue-shadow', '#09141e');
+        document.documentElement.style.setProperty('--container-bg', '#484848');
+        document.documentElement.style.setProperty('--font-color', '#e9fbff');
+        theme.innerHTML = '<img src="./svg/sun.svg">';
+    }
+}
+
 pickQuote();
 
-const newQuoteBtn = document.getElementById("new-quote");
-newQuoteBtn.addEventListener("click", pickQuote)
+newQuoteBtn.addEventListener("click", pickQuote);
 
-const copyBtn = document.getElementById("copyBtn");
-copyBtn.addEventListener("click", copyQuote)
+copyBtn.addEventListener("click", copyQuote);
+
+theme.addEventListener("click", changeTheme);

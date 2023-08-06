@@ -1,39 +1,52 @@
+:root {
+    --main-blue: #59afff;
+    --blue-shadow: #3972a8;
+    --container-bg: #e9fbff;
+    --font-color: #595959;
+}
+
 body {
-    background-color: #59afff;
+    background-color: var(--main-blue);
     margin: 0;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s;
 }
 
 #container {
     max-width: min(600px, 80vw);
     aspect-ratio: 6/4;
     overflow: hidden;
-    box-shadow: 10px 10px 17px #3972a8;
-    background-color: #e9fbff;
+    box-shadow: 10px 10px 17px var(--blue-shadow);
+    background-color: var(--container-bg);
     border-radius: 13px;
     padding: 30px 50px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 h1 {
+    color: var(--font-color);
     text-align: center;
     font-size: 199%;
     margin: 0;
+    transition: color 0.3s;
 }
 
 .quote-container {
+    color: var(--font-color);
     margin: 0;
     font-size: 175%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
     margin-bottom: 0;
+    transition: color 0.3s;
 }
 
 #quote {
@@ -41,12 +54,14 @@ h1 {
 }
 
 #quotee {
+    color: var(--font-color);
     margin: 5px 0 0 0;
     text-align: right;
     font-style: italic;
     font-size: 100%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: lighter;
+    transition: color 0.3s;
 }
 
 hr {
@@ -72,12 +87,12 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #e9fbff;
-    transition: 0.2s;
+    background-color: transparent;
+    transition: box-shadow 300ms, background-color 200ms;
 }
 
 .action-btn:hover {
-    background-color: #cfe4ea;
+    box-shadow: 0 0 7px #59afff;
 }
 
 .action-btn:active {
@@ -87,19 +102,18 @@ hr {
 #new-quote {
     padding: 0 3.7%;
     background-color: #59afff;
-    color: white;
+    color: #e9fbff;
     font-size: 100%;
     margin-left: auto;
-    transition: 0.2s;
-    transition: color 0.1s;
+    transition: box-shadow 300ms, color 200ms;
 }
 
 #new-quote:hover {
-    background-color: #4f9ee9;
+    box-shadow: 0 0 7px #59afff;
 }
 
 #new-quote:active {
-    color: #4f9ee9;
+    color: #59afff;
 } 
 
 img {
